@@ -44,7 +44,7 @@ export default function LoginPage() {
         streamlines your online experience.
       </p>
       <LoginForm />
-      <div className=" flex text-sm text-center text-[#C9CED6] mt-[282px] ">
+      <div className=" flex text-center text-[#C9CED6] mt-[248px] ">
         <Link href="/signup">
           <h1 className=" text-[#144EE3] underline mr-[5px] ">Register </h1>
         </Link>
