@@ -11,7 +11,6 @@ export default function ForgetPage() {
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
         alignItems: "center",
       }}
     >

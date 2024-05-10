@@ -1,12 +1,5 @@
-import React, { ChangeEvent } from "react";
-
-interface InputProps {
-  value?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
-  type?: string;
-  placeholder: string;
-}
+import React from "react";
+import { InputProps } from "@/app/types/types";
 
 export default function Input({
   value,

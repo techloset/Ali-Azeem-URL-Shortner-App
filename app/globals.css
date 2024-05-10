@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.loader {
+  animation: rotate 1s infinite;
+  height: 90px; /* Increased height */
+  width: 90px; /* Increased width */
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  height: 36px; /* Adjusted height */
+  width: 36px; /* Adjusted width */
+}
+
+.loader:before {
+  animation: box1 1s infinite;
+  background-color: #241663;
+  box-shadow: 54px 0 0 #160f30; /* Adjusted box-shadow */
+  margin-bottom: 20px; /* Adjusted margin */
+}
+
+.loader:after {
+  animation: box2 1s infinite;
+  background-color: #160f30;
+  box-shadow: 54px 0 0 #241663; /* Adjusted box-shadow */
+  margin-top: -36px; /* Adjusted margin */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes box1 {
+  0% {
+    box-shadow: 54px 0 0 #160f30; /* Adjusted box-shadow */
+  }
+  50% {
+    box-shadow: 0 0 0 #160f30;
+    margin-bottom: 0;
+    transform: translate(27px, 27px); /* Adjusted translation */
+  }
+  100% {
+    box-shadow: 54px 0 0 #160f30; /* Adjusted box-shadow */
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+}
+
+@keyframes box2 {
+  0% {
+    box-shadow: 54px 0 0 #241663; /* Adjusted box-shadow */
+  }
+  50% {
+    box-shadow: 0 0 0 #241663;
+    margin-top: -36px; /* Adjusted margin */
+    transform: translate(27px, 27px); /* Adjusted translation */
+  }
+  100% {
+    box-shadow: 54px 0 0 #241663; /* Adjusted box-shadow */
+    margin-top: 0;
+  }
+}

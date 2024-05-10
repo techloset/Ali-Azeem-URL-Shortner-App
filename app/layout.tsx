@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 import ToastProvider from "@/providers/ToastProvider";
-import Image from "next/image";
-import Background from "@/public/assets/BackgroundImage.svg";
+import ReduxProvider from "@/providers/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,15 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Image
-          alt="Background"
-          src={Background}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        /> */}
-        <ToastProvider />
-        <NextAuthSessionProvider>{children}</NextAuthSessionProvider>
+        <ReduxProvider>
+          <ToastProvider />
+          <NextAuthSessionProvider>{children}</NextAuthSessionProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

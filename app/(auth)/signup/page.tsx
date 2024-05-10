@@ -12,7 +12,6 @@ export default function LoginPage() {
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
         alignItems: "center",
       }}
     >

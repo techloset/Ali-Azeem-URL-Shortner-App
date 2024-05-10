@@ -54,9 +54,11 @@ export default function LoginForm() {
       />
       <div className=" flex text-center text-[#C9CED6] mb-[32px] ml-[300px] mt-[-10px] ">
         <Link href="/forgetPassword">
-          <h1 className=" text-[#144EE3] underline mr-[5px] ">Forget Password</h1>
+          <h1 className=" text-[#144EE3] underline mr-[5px] ">
+            Forget Password
+          </h1>
         </Link>
-        if can't remember password
+        if can&apos;t remember password
       </div>
       <div
         onClick={login}

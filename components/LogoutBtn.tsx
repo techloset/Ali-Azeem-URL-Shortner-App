@@ -7,7 +7,7 @@ export default function LogoutBtn() {
   return (
     <div>
       <div
-        className="text-center py-3 rounded-full text-white bg-[#FFB1B1] cursor-pointer"
+        className="text-white cursor-pointer"
         onClick={() => {
           signOut();
         }}

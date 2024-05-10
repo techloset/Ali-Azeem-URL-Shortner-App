@@ -1,5 +1,4 @@
 import React from "react";
-import ForgetForm from "@/components/forgetForm";
 import ResetForm from "@/components/ResetForm";
 
 export default function ResetPage() {
@@ -12,7 +11,6 @@ export default function ResetPage() {
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
         alignItems: "center",
       }}
     >
