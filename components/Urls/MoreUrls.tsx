@@ -14,7 +14,7 @@ import Link from "next/link";
 import edit from "@/public/assets/edit.svg";
 import Loader from "../Load";
 import { TableItem } from "@/app/types/types";
-
+import { Url } from "@/constants/setUrl";
 const Urls: React.FC = () => {
   const dispatch = useDispatch();
   const { link, loading } = useSelector((state: RootState) => state.link);
@@ -31,7 +31,7 @@ const Urls: React.FC = () => {
   }, [link]);
   const handleDeleteList = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:3000/api/list/${id}`);
+      await axios.delete(`${Url}/api/list/${id}`);
       console.log(id);
 
       toast.success("Task Deleted Successfully");

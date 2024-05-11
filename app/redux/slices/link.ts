@@ -1,7 +1,7 @@
 import { ListSlice } from "@/app/types/types";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+import { Url } from "@/constants/setUrl";
 const initialState: ListSlice = {
   link: [],
   loading: false,
@@ -10,7 +10,7 @@ const initialState: ListSlice = {
 
 export const fetchData = createAsyncThunk("list/listdata", async () => {
   try {
-    const response = await axios.get(`http://localhost:3000/api/link`);
+    const response = await axios.get(`${Url}/api/link`);
     const result = response.data;
     console.log("🚀 ~ constfetchData:any=createAsyncThunk ~ result:", result);
     return result;

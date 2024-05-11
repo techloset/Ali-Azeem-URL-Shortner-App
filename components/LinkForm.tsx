@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Images } from "@/constants/constants";
-
+import { Url } from "@/constants/setUrl";
 export default function LinkForm() {
   const [link, setLink] = useState("");
 
@@ -13,7 +13,7 @@ export default function LinkForm() {
     console.log(link);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/link",
+        `${Url}/api/link`,
         { longUrl: link },
 
         {
