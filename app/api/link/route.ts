@@ -49,10 +49,10 @@ export const POST = async (req: NextRequest) => {
 
 export const DELETE = async (req: NextRequest) => {
   try {
+    const prisma = new PrismaClient();
     const { id } = await req.json();
     console.log("Received id:", id);
-
-    const url = await prismaClient.url.findUnique({
+    const url = await prisma.url.findUnique({
       where: { id },
     });
     console.log(id);

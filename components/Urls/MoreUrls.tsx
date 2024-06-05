@@ -14,7 +14,6 @@ import Link from "next/link";
 import edit from "@/public/assets/edit.svg";
 import Loader from "../Load";
 import { TableItem } from "@/app/types/types";
-import { Url } from "@/constants/setUrl";
 const Urls: React.FC = () => {
   const dispatch = useDispatch();
   const { link, loading } = useSelector((state: RootState) => state.link);
@@ -31,10 +30,16 @@ const Urls: React.FC = () => {
   }, [link]);
   const handleDeleteList = async (id: string) => {
     try {
-      await axios.delete(`${Url}/api/list/${id}`);
+      const response = await axios.delete(`http://localhost:3000/api/link`, {
+        data: { id },
+      });
       console.log(id);
 
-      toast.success("Task Deleted Successfully");
+      if (response.status === 200) {
+        toast.success("Task Deleted Successfully");
+      } else {
+        toast.error("Failed to delete task");
+      }
     } catch (error) {
       console.error("Error deleting task:", error);
       toast.error("Failed to delete task");
@@ -65,7 +70,7 @@ const Urls: React.FC = () => {
                 <tr key={i}>
                   <td className="pl-[25px]">
                     <a target="_blank" href={item.longUrl}>
-                      {item.shortUrl}
+                      http://www.{item.shortUrl}.com/
                     </a>
                   </td>
                   <td className="flex justify-between w-[476.76px] ">

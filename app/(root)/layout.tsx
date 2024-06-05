@@ -21,14 +21,16 @@ export default async function ProtectedRootLayout({
   return (
     <main>
       <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-        <Image
+        {/* <Image
           alt="Background"
           src={Images.BackgroundImage}
           layout="fill"
           objectFit="cover"
           quality={100}
-        />
-        <div style={{ position: "absolute" }}>{children}</div>
+        /> */}
+        <div className="background" style={{ position: "absolute" }}>
+          {children}
+        </div>
       </div>
     </main>
   );

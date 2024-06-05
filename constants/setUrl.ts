@@ -1,1 +1,1 @@
-export const Url = "https://ali-azeem-url-shortner-app.vercel.app";
+export const Url = "http://localhost:3000/";
