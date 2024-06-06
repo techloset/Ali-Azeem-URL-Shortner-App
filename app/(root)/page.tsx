@@ -35,7 +35,7 @@ export default function HomePage() {
               Shorten Now!
             </h1>
             <div className="text-[#FFFFFF] px-[15.48px] py-[13.5px] border-[1px] rounded-[48px] border-[#144EE3] bg-[#144EE3] sm:hidden ">
-              (--)
+              (---)
             </div>
           </div>
         </Link>
