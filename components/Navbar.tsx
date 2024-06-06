@@ -8,9 +8,9 @@ export default async function Navbar() {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="grid  ">
-      <div className="w-screen flex flex-col items-center">
-        <div className="flex flex-row items-center text-[blue] px-[52px] mt-[40px] w-full justify-between ">
+    <div>
+      <div className="w-screen flex flex-col items-center ">
+        <div className="flex flex-row items-center text-[blue] sm:px-[52px] px-[26px] mt-[40px] w-full justify-between ">
           <Link href="/">
             <h1
               className="text-[36.91px] font-bold"
